@@ -6,24 +6,15 @@
     <title>Ruffle on Vercel</title>
     <!-- Ruffle CDN Script -->
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const ruffle = window.RufflePlayer.newest();
-            const player = ruffle.createPlayer();
-            document.body.appendChild(player);
-            player.load("papashotdoggeria.swf");
-        });
-    </script>
 </head>
 <body>
     <h1>Papa's Hot Doggeria</h1>
     <p>Play Papa's Hot Doggeria</p>
     <div>
-        <!-- Container for Ruffle player -->
-        <div id="game-container" style="width: 800px; height: 600px;">
-            <!-- Fallback message will be displayed if Ruffle cannot load the game -->
-            <p>If the game doesn't load, please check your browser settings or try using a supported browser.</p>
-        </div>
+        <!-- Larger dimensions for the game -->
+        <embed src="papashotdoggeria.swf" width="800" height="600">
+        <!-- Fallback for browsers that don't support the embed or Ruffle -->
+        <p>If the game doesn't load, please check your browser settings or try using a supported browser.</p>
     </div>
 </body>
 </html>
